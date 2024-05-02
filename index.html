@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kashik Ramnath</title>
+
+    <!--  REFERENCE TO CSS  -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    
+    <!--  MY HEADER; CONSISTING OF NAVBAR AND LOGO  -->
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.png" class="logo" alt="Website Logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header_text">
+                <p>Data Analytics, Application & Software Development</p>
+                <h1>Hi, I'm <span>Kashik Ramnath,</span> from South Africa</h1>
+            </div>
+        </div>
+    </div>
+
+    <!--  ABOUT SECTION OF WEBSITE; IMAGE & TEXT  -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about_image">
+                    <img src="images/about_logo.png" alt="About image">
+                </div>
+                <div class="about_text">
+                    <h1 class="sub_title">About Me</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Magni, assumenda. Tempore voluptate dignissimos quis minus itaque dolor 
+                        molestias laborum, explicabo rerum, quidem cum odit? Cumque officiis 
+                        repellendus ipsa facere saepe? Lorem ipsum dolor sit amet consectetur 
+                        adipisicing elit. Dicta perferendis eligendi iste odio cupiditate id 
+                        praesentium. Sit id molestias temporibus perspiciatis a quisquam laborum 
+                        pariatur similique architecto porro? Expedita, eligendi.</p>
+
+                        <div class="tab_titles">
+                            <p class="tab_links active_link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab_links" onclick="opentab('education')">Education</p>
+                            <p class="tab_links" onclick="opentab('experience')">Experience</p>
+                        </div>
+
+                        <div class="tab_contents active_tab" id="skills">
+                            <ul>
+                                <li>
+                                    <span>Data Analytics</span><br>
+                                    Machine Learning, etc </li>
+                                <li>
+                                    <span>Advanced Databases</span><br>
+                                    SQL, etc </li>
+                                <li>
+                                    <span>Software/Application Development</span><br>
+                                    Python, Java, C#, etc </li>
+                            </ul>
+                        </div>
+
+                        <div class="tab_contents" id="education">
+                            <ul>
+                                <li>
+                                    <span>2023 Jan-Dec</span><br>
+                                    Postgraduate Diploma in Data Analytics,
+                                    <br>IIE Varsity College</li>
+                                <li>
+                                    <span>2020-2022</span><br>
+                                    Bachelor of Computer & Information Sciences in Application Development,
+                                    <br>IIE Varsity College</li>
+                            </ul>
+                        </div>
+
+                        <div class="tab_contents" id="experience">
+                            <ul>
+                                <li>
+                                    <span>2022 Jan-Dec</span><br>
+                                    IMBIZO Foundation,<br>NGO work as a programmer & bug tester 
+                                    for creating an educational android application</li>
+                                <li>
+                            </ul>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--  REFERENCE TO JavaScript  -->
+    <script>
+        var tablinks = document.getElementsByClassName("tab_links");
+        var tabcontents = document.getElementsByClassName("tab_contents");
+
+        function opentab(tabname){ /*tabname is palceholder for name of tabes skills, educ, exp*/
+            for(tablink of tablinks){
+                tablink.classList.remove("active_link") /*removes underlines*/
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active_tab") /*removes content*/
+            }
+            event.currentTarget.classList.add("active_link"); /*adds clicked tab underline*/
+            document.getElementById(tabname).classList.add("active_tab"); /*adds clicked tab content*/
+        }
+
+    </script>
+
+</body>
+</html>
