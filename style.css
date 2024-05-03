@@ -10,6 +10,10 @@ body{
     color: whitesmoke;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 /*---------------------- NAVBAR -----------------------------------------------*/
 #header{
     width: 100%;
@@ -33,7 +37,7 @@ nav{
 }
 
 .logo{
-    width: 140px;
+    width: 100px; /*140 causes clipping?*/
 }
 
 nav ul li{
@@ -260,11 +264,11 @@ nav ul li a:hover::after{
 
 .layer a{
     margin-top: 20px;
-    color: hsl(0, 0%, 0%);
+    color: whitesmoke;
     text-decoration: none;
     font-size: 18px;
     line-height: 60px;
-    background: whitesmoke;
+    background: black;
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -365,4 +369,75 @@ form .btn2{
 }
 .copyright i{
     color: hsl(185, 86%, 46%);
+}
+
+/*------CSS FOR SMALL SCREEN------*/
+nav .fa-solid{
+    display: none;
+}
+
+@media only screen and (max-width: 600px){
+    #header{
+        background-image: url(images/background.png);
+    }
+    .header_text{
+        margin-top: 100%;
+        font-size: 16px;
+    }
+    .header_text h1{
+        font-size: 30px;
+    }
+    nav .fa-solid{
+        display: block;
+        font-size: 25px;
+    }
+    nav ul{
+        background: hsl(185, 86%, 7%);
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2; /*JAVASCRIPT*/
+        transition:  right 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+    nav ul .fa-solid{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    .sub_title{
+        font-size: 40px;
+    }
+    .about_image, .about_text{
+        flex-basis: 100%;
+    }
+    .about_image{
+        margin-bottom: 30px;
+    }
+    .about_text{
+        font-size: 14px;
+    }
+    .tab_links{
+        font-size: 16px;
+        margin-right: 20px;
+    }
+    .contact_left, .contact_right{
+        flex-basis: 100%;
+    }
+    .copyright{
+        font-size: 14px;
+    }
+}
+
+#msg{
+    color: hsl(185, 86%, 46%);
+    margin-top: -40px;
+    display: block;
 }
