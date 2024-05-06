@@ -12,6 +12,7 @@ header{
     width: 100%;
     height: 100vh;
 }
+
 nav{
     display: flex;
     align-items: center;
@@ -31,4 +32,33 @@ nav ul{
 nav ul li a{
     text-decoration: none;
     color: whitesmoke;
+}
+
+.title_div{
+    padding: 40px 40px;
+    text-align: center;
+}
+div h1{
+    color: hsl(185, 86%, 46%);
+}
+
+.skill_box{
+    padding: 0 50px;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.skill_image{
+    flex-basis: 35%; /*column width 35%*/
+}
+.skill_image img{
+    width: 100%;
+    border-radius: 15px; /*image corners rounded*/
+}
+.skill_text{
+    flex-basis: 60%; /*column width 60%*/
+    padding: 15px;
 }
