@@ -21,7 +21,7 @@ nav{
     background-color: black;
 }
 nav img{
-    width: 10%;
+    width: 100px;
 }
 nav h1{
     color: hsl(185, 86%, 46%);
@@ -44,6 +44,7 @@ div h1{
 
 .skill_box{
     padding: 0 50px;
+    padding-bottom: 100px;
 }
 
 .row{
