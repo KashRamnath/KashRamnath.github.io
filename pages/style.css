@@ -63,3 +63,9 @@ div h1{
     flex-basis: 60%; /*column width 60%*/
     padding: 15px;
 }
+.skill_text ul{
+    padding-left: 15%;
+}
+
+@media only screen and (max-width: 600px){
+}
