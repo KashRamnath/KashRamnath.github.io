@@ -13,6 +13,16 @@ header{
     height: 100vh;
 }
 
+.main_header{
+    display: flex;
+    justify-content: center;
+    padding: 5%;
+    font-size: x-large;
+}
+.main_header h1{
+    color: hsl(185, 86%, 46%);
+}
+
 nav{
     display: flex;
     align-items: center;
@@ -64,7 +74,12 @@ div h1{
     padding: 15px;
 }
 .skill_text ul{
-    padding-left: 15%;
+    /*padding-left: 15%;*/
+    text-align: center;
+    list-style: none;
+}
+.skill_text p{
+    text-align: center;
 }
 
 @media only screen and (max-width: 600px){
