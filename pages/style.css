@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 body{
-    background-color: hsl(0, 0%, 7%);
+    background-color: hsl(0, 0%, 0%);/*7%);*/
     color: whitesmoke;
 }
 header{
@@ -81,6 +81,18 @@ div h1{
 .skill_text p{
     text-align: center;
 }
+
+/*----------------------------------------------
+ALTERNATING BACKGROUND COLOR OF UNORDERED LIST*/
+.items li{
+    background-color: hsl(0, 0%, 10%);
+    border-radius: 10px;
+}
+.items li:nth-child(even){
+    background-color: hsl(0, 0%, 5%);
+}
+/*---------------------------------------------*/
+
 
 @media only screen and (max-width: 600px){
 }
